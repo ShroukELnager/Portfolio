@@ -33,10 +33,10 @@ const portfolioItems = [
     link: "https://note-app-plum-gamma.vercel.app/",
   },
   {
-    title: "Weather",
+    title: "Weather-App",
     category: "JS",
     image: weather,
-    link: "https://weather-eight-alpha-31.vercel.app/",
+    link: "https://weather-app-kappa-five-77.vercel.app/",
   },
   {
     title: "DoToList",
