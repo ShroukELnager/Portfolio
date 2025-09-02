@@ -1,6 +1,11 @@
+import { useState } from "react";
+
 import whatsapp from "../assets/whatsapp.png";
 import ecommerce from "../assets/e-commerce.png";
 import portofolio from "../assets/portofolio.png";
+import NoteApp from "../assets/NoteApp.png";
+import weather from "../assets/weather.png";
+import TodoList from "../assets/TodoList.png";
 
 const portfolioItems = [
   {
@@ -21,9 +26,35 @@ const portfolioItems = [
     image: portofolio,
     link: "https://portfolio-six-sage-50.vercel.app/",
   },
+  {
+    title: "Note-App",
+    category: "JS",
+    image: NoteApp,
+    link: "https://note-app-plum-gamma.vercel.app/",
+  },
+  {
+    title: "Weather",
+    category: "JS",
+    image: weather,
+    link: "https://weather-eight-alpha-31.vercel.app/",
+  },
+  {
+    title: "DoToList",
+    category: "JS",
+    image: TodoList,
+    link: "https://to-do-list-three-lemon-79.vercel.app/",
+  },
 ];
 
 const Portfolio = () => {
+  const [activeTab, setActiveTab] = useState("All");
+
+  // فلترة المشاريع بناء على التبويب المختار
+  const filteredItems =
+    activeTab === "All"
+      ? portfolioItems
+      : portfolioItems.filter((item) => item.category === activeTab);
+
   return (
     <section className="px-6 md:px-16 py-12" data-aos="fade-up">
       {/* Title */}
@@ -31,16 +62,36 @@ const Portfolio = () => {
 
       {/* Description */}
       <p className="text-gray-600 max-w-3xl mb-8 text-sm md:text-base">
-        Here are some of my selected projects, each designed with a focus on responsiveness,
-        performance, and clean user experience.
-        Every piece reflects attention to detail and modern development practices.
+        Here are some of my selected projects, each designed with a focus on
+        responsiveness, performance, and clean user experience. Every piece
+        reflects attention to detail and modern development practices.
       </p>
+
+      {/* Tabs */}
+      <div className="flex gap-4 mb-10">
+        {["All", "React", "JS"].map((category) => (
+          <button
+            key={category}
+            onClick={() => setActiveTab(category)}
+            className={`px-5 py-2 rounded-full font-medium border transition-all duration-300
+              ${
+                activeTab === category
+                  ? "bg-[#0b0e17] text-white border-[#0b0e17]"
+                  : "bg-white text-[#0b0e17] border-gray-300 hover:border-[#0b0e17]"
+              }`}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
 
       {/* Portfolio Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        {portfolioItems.map((item, index) => (
-          <div key={index} className="group relative rounded-lg overflow-hidden shadow-md bg-white transition transform hover:-translate-y-1 hover:shadow-xl duration-300">
-            
+        {filteredItems.map((item, index) => (
+          <div
+            key={index}
+            className="group relative rounded-lg overflow-hidden shadow-md bg-white transition transform hover:-translate-y-1 hover:shadow-xl duration-300"
+          >
             {/* Image with overlay */}
             <div className="relative">
               <img
