@@ -18,7 +18,7 @@ const portfolioItems = [
     title: "E-commerce Website",
     category: "React",
     image: ecommerce,
-    link: "https://e-commerce-mu-six-38.vercel.app/",
+    link: "https://e-commerce-ashy-chi-86.vercel.app/",
   },
   {
     title: "Personal Portfolio",
