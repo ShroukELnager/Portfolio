@@ -48,13 +48,13 @@ export default function SideBar() {
 
         {/* Social Icons */}
         <div className="flex gap-3 mt-4 justify-center">
-          <a className="p-3 bg-gray-800 rounded-full hover:bg-gray-600" href="#">
+          <a className="p-3 bg-gray-800 rounded-full hover:bg-gray-600" href="mailto:shrouk.kamel123@gmail.com" target="_blank">
             <FaGoogle size={18} />
           </a>
-          <a className="p-3 bg-gray-800 rounded-full hover:bg-gray-600" href="#">
+          <a className="p-3 bg-gray-800 rounded-full hover:bg-gray-600" href="https://www.linkedin.com/in/shrouk-kamel/">
             <FaLinkedinIn size={18} />
           </a>
-          <a className="p-3 bg-gray-800 rounded-full hover:bg-gray-600" href="#">
+          <a className="p-3 bg-gray-800 rounded-full hover:bg-gray-600" href="https://github.com/settings/profile">
             <FaGithub size={18} />
           </a>
         </div>
