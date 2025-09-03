@@ -49,7 +49,6 @@ const portfolioItems = [
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState("All");
 
-  // فلترة المشاريع بناء على التبويب المختار
   const filteredItems =
     activeTab === "All"
       ? portfolioItems
@@ -67,23 +66,24 @@ const Portfolio = () => {
         reflects attention to detail and modern development practices.
       </p>
 
-      {/* Tabs */}
-      <div className="flex gap-4 mb-10">
-        {["All", "React", "JS"].map((category) => (
-          <button
-            key={category}
-            onClick={() => setActiveTab(category)}
-            className={`px-5 py-2 rounded-full font-medium border transition-all duration-300
-              ${
-                activeTab === category
-                  ? "bg-[#0b0e17] text-white border-[#0b0e17]"
-                  : "bg-white text-[#0b0e17] border-gray-300 hover:border-[#0b0e17]"
-              }`}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+     {/* Tabs */}
+<div className="flex justify-center gap-4 mb-10">
+  {["All", "React", "JS"].map((category) => (
+    <button
+      key={category}
+      onClick={() => setActiveTab(category)}
+      className={`px-5 py-2 rounded-full font-medium border transition-all duration-300
+        ${
+          activeTab === category
+            ? "bg-[#0b0e17] text-white border-[#0b0e17]"
+            : "bg-white text-[#0b0e17] border-gray-300 hover:border-[#0b0e17]"
+        }`}
+    >
+      {category}
+    </button>
+  ))}
+</div>
+
 
       {/* Portfolio Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
