@@ -24,7 +24,7 @@ const portfolioItems = [
     title: "Personal Portfolio",
     category: "React",
     image: portofolio,
-    link: "https://portfolio-lyart-gamma-24.vercel.app/",
+    link: "https://portfolio-phi-nine-58.vercel.app/",
   },
   {
     title: "Note-App",
