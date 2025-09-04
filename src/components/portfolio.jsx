@@ -18,7 +18,7 @@ const portfolioItems = [
     title: "E-commerce Website",
     category: "React",
     image: ecommerce,
-    link: "https://e-commerce-ashy-chi-86.vercel.app/",
+    link: "https://e-commerce-five-gray-72.vercel.app/",
   },
   {
     title: "Personal Portfolio",
@@ -30,7 +30,7 @@ const portfolioItems = [
     title: "Note-App",
     category: "JS",
     image: NoteApp,
-    link: "https://note-app-plum-gamma.vercel.app/",
+    link: "https://note-app-mu-azure.vercel.app/",
   },
   {
     title: "Weather-App",
