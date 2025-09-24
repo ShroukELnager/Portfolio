@@ -54,7 +54,7 @@ export default function SideBar() {
           <a className="p-3 bg-gray-800 rounded-full hover:bg-gray-600" href="https://www.linkedin.com/in/shrouk-kamel/">
             <FaLinkedinIn size={18} />
           </a>
-          <a className="p-3 bg-gray-800 rounded-full hover:bg-gray-600" href="https://github.com/settings/profile">
+          <a className="p-3 bg-gray-800 rounded-full hover:bg-gray-600" href="https://github.com/ShroukELnager">
             <FaGithub size={18} />
           </a>
         </div>
