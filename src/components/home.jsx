@@ -21,7 +21,7 @@ export default function Home() {
                     <TextType
                         text={["I'm Frontend Web Developer .",
                              "I Create Websites", 
-                             "Landing Page Dashboard,Potfolio and more"]}
+                             "Landing Page Dashboard,Portfolio and more"]}
 
                         typingSpeed={75}
                         deletingSpeed={50}
